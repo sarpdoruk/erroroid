@@ -1,0 +1,32 @@
+version: 2.1
+orbs:
+  golangci-lint: junpayment/golangci-lint@0.0.8
+  codecov: codecov/codecov@1.1.1
+jobs:
+  test:
+    parameters:
+      version:
+        type: string
+        default: latest
+    docker:
+      - image: circleci/golang:<< parameters.version >>
+    working_directory: /go/src/github.com/sarpdoruk/erroroid
+    steps:
+      - checkout
+      - run:
+          name: Go version
+          command: go version
+      - golangci-lint/exec
+      - run:
+          name: Unit Test
+          command: go test -race -coverprofile=coverage.txt -covermode=atomic
+      - codecov/upload:
+          file: coverage.txt
+          flags: unittests
+workflows:
+  tests:
+    jobs:
+      - test:
+          matrix:
+            parameters:
+              version: ["latest", "1.15", "1.14", "1.13", "1.12"]
