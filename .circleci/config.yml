@@ -14,8 +14,8 @@ jobs:
     steps:
       - checkout
       - run:
-        name: Go version
-        command: go version
+          name: Go version
+          command: go version
       - golangci-lint/exec
       - run:
           name: Unit Test
@@ -29,4 +29,4 @@ workflows:
       - test:
           matrix:
             parameters:
-              version: ["latest", "1.15", "1.14", "1.13", "1.12", "1.11"]
+              version: ["latest", "1.15", "1.14", "1.13", "1.12"]
