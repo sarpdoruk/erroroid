@@ -1,14 +1,15 @@
 language: go
-
+env:
+  - GO111MODULE=on
 go:
-  - 1.15.x
-
+  - "1.15"
+  - "1.14"
+  - "1.13"
+  - "1.12"
 before_script:
   - go get github.com/golangci/golangci-lint/cmd/golangci-lint
-
 script:
   - golangci-lint run
   - go test -race -coverprofile=coverage.txt -covermode=atomic
-
 after_success:
   - bash <(curl -s https://codecov.io/bash)

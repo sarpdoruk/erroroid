@@ -1,4 +1,5 @@
-# Erroroid [![Build Status](https://travis-ci.com/sarpdoruk/erroroid.svg?branch=main)](https://travis-ci.com/sarpdoruk/erroroid) [![Go Report Card](https://goreportcard.com/badge/github.com/sarpdoruk/erroroid)](https://goreportcard.com/report/github.com/sarpdoruk/erroroid) [![codecov](https://codecov.io/gh/sarpdoruk/erroroid/branch/main/graph/badge.svg?token=BJ2GUL0D47)](https://codecov.io/gh/sarpdoruk/erroroid/branch/main/graph/badge.svg?token=BJ2GUL0D47)
+# Erroroid
+[![Build Status](https://travis-ci.com/sarpdoruk/erroroid.svg?branch=main)](https://travis-ci.com/sarpdoruk/erroroid) [![sarpdoruk](https://circleci.com/gh/sarpdoruk/erroroid.svg?style=shield)](https://app.circleci.com/pipelines/github/sarpdoruk/erroroid) [![Go Report Card](https://goreportcard.com/badge/github.com/sarpdoruk/erroroid)](https://goreportcard.com/report/github.com/sarpdoruk/erroroid) [![codecov](https://codecov.io/gh/sarpdoruk/erroroid/branch/main/graph/badge.svg?token=BJ2GUL0D47)](https://codecov.io/gh/sarpdoruk/erroroid/branch/main/graph/badge.svg?token=BJ2GUL0D47)
 
 It's basically `error` type on steroids that helps you to easily find the error in your code by printing the filename, line, function name and the error message in a given format to stdout.
 
