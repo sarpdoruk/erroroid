@@ -14,8 +14,8 @@ jobs:
     steps:
       - checkout
       - run:
-        name: Go version
-        command: go version
+          name: Go version
+          command: go version
       - golangci-lint/exec
       - run:
           name: Unit Test
