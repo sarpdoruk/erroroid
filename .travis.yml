@@ -1,6 +1,10 @@
 language: go
 go:
-  - 1.15.x
+  - "1.15"
+  - "1.14"
+  - "1.13"
+  - "1.12"
+  - "1.11"
 before_script:
   - go get github.com/golangci/golangci-lint/cmd/golangci-lint
 script:
